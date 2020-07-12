@@ -2,11 +2,14 @@
 
 namespace App\Services;
 
-use App\Strategies\SMSVerification\SmsStrategy;
-use App\Strategies\EmailVerification\EmailStrategy;
+use App\Traits\ApiResponser;
+use App\Strategies\SMSVerificationStrategy\SmsStrategy;
+use App\Strategies\EmailVerificationStrategy\EmailStrategy;
 
 class VerificationService implements VerificationServiceInterface
 {
+    use ApiResponser;
+
     private $smsStrategy;
     private $emailStrategy;
 
@@ -16,7 +19,7 @@ class VerificationService implements VerificationServiceInterface
         $this->emailStrategy = $emailStrategy;
     }
 
-    
+
     public function verify($request)
     {
 
@@ -25,7 +28,7 @@ class VerificationService implements VerificationServiceInterface
         } elseif (config('twilio.verification_method') == 'email') {
             return $this->emailStrategy->send($request->email);
         } else {
-            return response()->json(['message' => 'Please provide the verification method "sms or email"']);
+            return $this->errorResponse('Please provide the verification method "sms or email"', 400);
         }
     }
 }

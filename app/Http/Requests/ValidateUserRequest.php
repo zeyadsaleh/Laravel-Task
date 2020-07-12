@@ -25,7 +25,7 @@ class ValidateUserRequest extends FormRequest
     {
         return [
             'email' => 'required|email:rfc,dns',
-            'phone_number' => 'required|regex:/(\+[0-9 ])(01)[0-9 ]{9}/'
+            'phone_number' => 'required|max:13|regex:/(\+[0-9 ])(01)[0-9 ]{9}/'
         ];
     }
     public function messages(){

@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-namespace App\Strategies\SMSVerification;
+namespace App\Strategies\SMSVerificationStrategy;
 
 interface SmsStrategy
 {

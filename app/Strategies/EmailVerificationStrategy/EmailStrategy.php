@@ -1,8 +1,9 @@
-<?php 
+<?php
 
-namespace App\Strategies\EmailVerification;
+namespace App\Strategies\EmailVerificationStrategy;
 
 interface EmailStrategy
 {
+
     public function send($email);
 }

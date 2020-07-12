@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('users', 'UserController@store');
-
-Route::post('verify', 'UserController@verify');
+Route::post('users', 'UserController@store')->name('users.store');;
 
 

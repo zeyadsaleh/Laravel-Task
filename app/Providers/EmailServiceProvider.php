@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Strategies\EmailVerification\EmailStrategy;
-use App\Strategies\EmailVerification\SendByMailTrap;
+use App\Strategies\EmailVerificationStrategy\EmailStrategy;
+use App\Strategies\EmailVerificationStrategy\SendByMailTrap;
 use Illuminate\Support\ServiceProvider;
 
 class EmailServiceProvider extends ServiceProvider
@@ -26,6 +26,5 @@ class EmailServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind(EmailStrategy::class, SendByMailTrap::class);
-
     }
 }

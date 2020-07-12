@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Strategies\SMSVerification;
+namespace App\Strategies\SMSVerificationStrategy;
 
+use App\Traits\ApiResponser;
 use Twilio\Rest\Client;
 
 class SendByTwilio implements SmsStrategy
 {
+    use ApiResponser;
+
     public function send($phone_number)
     {
         $token = config('twilio.token');
@@ -15,6 +18,6 @@ class SendByTwilio implements SmsStrategy
         $twilio->verify->v2->services($twilio_verify_sid)
             ->verifications
             ->create($phone_number, "sms");
-        return response()->json(['message' => 'Verification code was send via SMS']);
+        return $this->successResponse('Verification code was send via SMS');
     }
 }
