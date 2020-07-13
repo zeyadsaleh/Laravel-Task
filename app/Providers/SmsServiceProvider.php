@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Strategies\SMSVerificationStrategy\SmsStrategy;
-use App\Strategies\SMSVerificationStrategy\SendByTwilio;
+use App\Lib\SMSVerificationStrategy\SmsStrategy;
+use App\Lib\SMSVerificationStrategy\SendByTwilio;
 use Illuminate\Support\ServiceProvider;
 
 class SmsServiceProvider extends ServiceProvider

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ValidateUserRequest;
 use App\Services\VerificationServiceInterface;
 
-class UserController extends Controller
+class VerificationController extends Controller
 {
     private $verificationService;
 
@@ -15,8 +15,9 @@ class UserController extends Controller
     }
 
 
-    public function store(ValidateUserRequest $request)
+    public function verify(ValidateUserRequest $request)
     {
         return $this->verificationService->verify($request);
+
     }
 }

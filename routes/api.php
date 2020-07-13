@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::post('users', 'UserController@store')->name('users.store');;
-
-
+Route::group(['prefix' => 'v1'], function () {
+    Route::post('verify', 'VerificationController@verify')->name('verify');
+});

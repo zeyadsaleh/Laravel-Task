@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Strategies\EmailVerificationStrategy\EmailStrategy;
-use App\Strategies\EmailVerificationStrategy\SendByMailTrap;
+use App\Lib\EmailVerificationStrategy\EmailStrategy;
+use App\Lib\EmailVerificationStrategy\SendByMailTrap;
 use Illuminate\Support\ServiceProvider;
 
 class EmailServiceProvider extends ServiceProvider

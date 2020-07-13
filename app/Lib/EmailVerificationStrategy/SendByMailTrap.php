@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Strategies\EmailVerificationStrategy;
+namespace App\Lib\EmailVerificationStrategy;
 
 use App\Traits\ApiResponser;
 use Illuminate\Support\Facades\Mail;
