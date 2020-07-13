@@ -5,7 +5,7 @@ Verification using SMS or Email
 ## Prerequisites
 
 - [node.js & npm](https://nodejs.org/)
-- You should have`composer` installed. If you don't, you can install composer from [here](https://getcomposer.org/download/).
+- [Composer](https://getcomposer.org/download/).
 - [laravel](http://laravel.com/)
 
 
