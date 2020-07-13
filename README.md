@@ -37,7 +37,7 @@ Please check the official laravel installation guide for server requirements bef
 5. Provide your Email credentials for sending email by MailTrap in .env file -> MAIL_USERNAME and MAIL_PASSWORD
 
 Start the local development server
-    ```sh
+    ```
     php artisan serve
     ```
 You can now access the server at http://localhost:8000
