@@ -17,26 +17,27 @@ Please check the official laravel installation guide for server requirements bef
 
 
 1. Clone the repository
+    ```sh
     git clone https://github.com/zeyadsaleh/Laravel-Task.git
-
+    ```
 2. Switch to the repo folder
-
+    ```sh
     cd Laravel-Task
-
+    ```
 3. Install all the dependencies using composer
-
+    ```sh
     composer install
-
+    ```
 4. Copy the example env file and make the required configuration changes in the .env file
-
+    ```sh
     cp .env.example .env
-    
+    ```  
 5. Provide your Twilio credentials in .env file -> TWILIO_SID, TWILIO_AUTH_TOKEN and TWILIO_VERIFY_SID
 
 6. Start the local development server
-
+    ```sh
     php artisan serve
-
+    ```
 You can now access the server at http://localhost:8000
 
 
