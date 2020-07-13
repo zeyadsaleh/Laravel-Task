@@ -46,7 +46,7 @@ This is version 1 (v1), so use the prefix v1 in the url.
 
 ## Authors
 
-**Zeyad Saleh**(https://www.linkedin.com/in/zeyad-saleh-612ab7124/)
+[Zeyad Saleh](https://www.linkedin.com/in/zeyad-saleh-612ab7124/)
 
 ## License
 
